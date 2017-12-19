@@ -1,0 +1,17 @@
+<?xml version="1.0"  encoding="UTF-8"?>
+<!DOCTYPE Configure PUBLIC "-//Jetty//Configure//EN" "http://www.eclipse.org/jetty/configure.dtd">
+
+<Configure class="org.eclipse.jetty.webapp.WebAppContext">
+	<Set name="contextPath">/</Set>
+	<Set name="war">
+		<Property name="jetty.home" default="." />
+		/webapps/EtlStatus
+	</Set>
+	<Set name="parentLoaderPriority">true</Set>
+	<Call name="addServerClass">
+		<Arg>-org.eclipse.jetty.util.</Arg>
+	</Call>
+	<Call name="addServerClass">
+		<Arg>-org.eclipse.jetty.websocket.server.</Arg>
+	</Call>
+</Configure>
